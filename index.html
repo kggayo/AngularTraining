@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="session01">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap-css-only/css/bootstrap.css" rel="stylesheet" />
+    <link href="content/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.css" />
+</head>
+
+<body>
+    <div  ng-controller="NavigationController">
+     <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">SES</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Training <b class="caret"></b></a>
+            <tree tree="tree"></tree>
+          </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+</div>
+    <div class="container" ng-view>
+
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script data-require="angular-ui-bootstrap@0.12.0" data-semver="0.12.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="clientside/_compiled.js"></script>
+</body>
+
+</html>
